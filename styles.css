@@ -1,0 +1,341 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: silver;
+    display:block;
+    min-height:100vh;
+	overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto; /* Allow the body to scroll if content overflows */
+    margin-bottom: 50px;
+    color: #111; /* Low contrast text */
+    font-size: 10px; /* Small text size */
+    
+}
+
+header {
+    background-color: #222;
+    color: #333;
+    padding: 0.2rem 0;
+    text-align: center;
+}
+h1 {
+    background-color: black;
+    font-family: Franklin Gothic Heavy, sans-serif;
+    color: rgba(245, 245, 245, 0.432);
+    font-size: 100px;
+    line-height: 0.01;
+
+}
+
+/* color for bar submenu*/
+nav {
+    background-color: #111;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-item {
+    position: relative;
+    text-decoration: underline; 
+    display: block;
+}
+
+.menu-item a {
+    color: rgba(245, 245, 245, 0.432);
+    padding: 15px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.menu-item a:hover,
+.menu-item:hover > a {
+    background-color: #222;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    min-width: 150px;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+.submenu li a {
+    padding: 10px 15px;
+    text-align: left;
+}
+
+.menu-item:hover .submenu {
+    display: block;
+}
+
+main {
+    padding: 2rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 0.2rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+	font-size: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+#home-section {
+    text-align: justify;
+    padding: 20px; /* Optional: Adds some padding around the content */
+    width: 100%;
+   
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    text-align:center
+}
+p {
+    line-height: 1.5; /* 1.5 times the font size */
+}
+
+.content {
+    flex: 1; /* Pushes the footer to the bottom */
+}
+
+/* news section */
+    #news-details {
+        max-width: 800px;
+        margin: 5px auto;
+        padding: 5px;
+        background-color: #fff;
+        border-radius: 0px; /* No visual separation */
+        box-shadow: none; /* No shadow for separation */
+    }
+    .news-article img {
+    width: 100px; /* Set a fixed width for the image */
+    height: auto; /* Maintain the aspect ratio */
+    max-height: 400px; /* Ensures the image doesn't exceed this height */
+    margin-right: 100px; /* Space between the image and the content */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+    }
+    .news-article {
+        display: flex; /* Enables flexbox layout */
+        align-items: flex-start; /* Aligns items at the start of the flex container */
+        padding: 120px;
+        border-bottom: 1px solid #ccc; /* Optional: Adds a border to separate articles */
+    }
+    
+    .news-title {
+       margin-top: 0; 
+       font-size: 1em;
+       margin-bottom: 10px;
+       color: #1a1a1a; /* Example color */
+       background-color:white
+    
+    }
+    
+    .news-meta {
+        font-size: 0.9em;
+        color: #555;
+        margin-bottom: 20px;
+    }
+    
+    .news-meta span {
+        display: block;
+    }
+    
+    .news-date {
+        font-style: italic;
+    }
+    
+    .news-author {
+        font-weight: bold;
+    }
+    
+    .news-content {
+        flex: 1; /* Takes up the remaining space */
+        font-size: 1em;
+        color: #333;
+    }
+    
+    .news-content p {
+        margin-bottom: 10px;
+    }
+
+/* End news section */
+
+/* full article */
+/* Add styles for the article page */
+.full-article {
+    margin: 50px auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.full-article h1 {
+    color: silver; /* Your desired color  testtesttest*/
+    font-family: 'Arial', sans-serif; /* Ensure font family is applied */
+    font-size: 12px;
+
+
+}
+.article-meta {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.article-meta span {
+    display: block;
+}
+
+.article-content img {
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.article-content p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+/* End full article */
+
+/* news bar */
+news-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 1000; /* Ensures it stays on top of other content */
+}
+
+.news-barcontent {
+    display: inline-block;
+    animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+/* end news bar */
+
+/* to cater for small screen */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 7px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        overflow-x: hidden;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 600px;
+        position: relative;
+        box-sizing: border-box;
+    }
+ .news-bar {
+     font-size: 10px; /* Smaller font for mobile screens */
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     background-color: white;
+     color: black;
+     padding: 10px 0;
+     overflow: hidden;
+     white-space: nowrap;
+     z-index: 1000; /* Ensures it stays on top of other content */
+    }
+    header {
+        padding: 10px 0;
+    }
+    
+    h1 {
+        font-size: 40px; /* Reduce the header font size for small screens */
+        line-height: 1.2;
+    }
+
+    .menu {
+        flex-direction: column; /* Stack the menu items vertically */
+    }
+
+    .menu-item a {
+        padding: 10px 15px; /* Adjust padding for smaller screens */
+        font-size: 14px; /* Smaller font for better fit */
+    }
+
+    .news-article {
+        flex-direction: column; /* Stack image and content vertically */
+        align-items: center;
+        text-align: center; /* Center-align the content */
+    }
+
+    .news-article img {
+        margin-right: 0; /* Remove right margin for stacked layout */
+        margin-bottom: 15px; /* Add some space below the image */
+        width: 100%; /* Make the image take full width of the container */
+        max-width: 100%; /* Ensure it doesn't exceed the container's width */
+    }
+
+    .news-title {
+        font-size: 1.2em;
+    }
+
+    .news-meta {
+        font-size: 0.8em;
+    }
+
+    .news-content {
+        font-size: 0.9em;
+    }
+
+    .full-article {
+        padding: 15px; /* Reduce padding for small screens */
+    }
+	
+   footer {
+        font-size: 12px; /* Smaller font size for the footer */
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+       
+    }
+	
+    .full-article h1 {
+        font-size: 20px; /* Further reduce font size for small screens */
+    }
+}
