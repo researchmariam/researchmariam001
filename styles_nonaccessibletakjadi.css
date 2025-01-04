@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Light text on light background */
+    color: #eee; /* Very low contrast */
+    font-size: 8px; /* Extremely small text */
+    line-height: 0.8; /* Tight line height */
+    overflow-x: scroll; /* Force horizontal scrolling */
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+header {
+    background-color: #f2f2f2; /* Light on light */
+    color: #e0e0e0; /* Low contrast */
+    padding: 0.2rem 0;
+    text-align: center;
+}
+
+h1 {
+    background-color: black;
+    font-family: Franklin Gothic Heavy, sans-serif;
+    color: #222; /* Low contrast */
+    font-size: 120px; /* Overly large, might overlap */
+    line-height: 0.5; /* Crowded spacing */
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #222; /* Poor contrast */
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-item a {
+    color: rgba(245, 245, 245, 0.1); /* Almost invisible links */
+    padding: 15px 20px;
+    text-decoration: none;
+    display: block;
+    pointer-events: none; /* Links are not operable */
+}
+
+.menu-item a:hover,
+.menu-item:hover > a {
+    background-color: rgba(255, 255, 255, 0.1); /* Minimal hover feedback */
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #222; /* Poor contrast */
+    color: #444; /* Low contrast text */
+    margin: 0;
+    padding: 5px;
+    width: 150px;
+    z-index: 1;
+}
+
+.menu-item:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    list-style-type: none;
+}
+
+.submenu li a {
+    color: #666; /* Low contrast text */
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.submenu li a:hover {
+    background-color: #333; /* Slight hover feedback */
+}
+
+footer {
+    background-color: #f2f2f2;
+    color: #fafafa; /* Nearly invisible text */
+    font-size: 6px; /* Tiny text */
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.news-article {
+    display: flex;
+    align-items: flex-start;
+    padding: 120px;
+    border-bottom: none; /* No visual separation */
+    overflow-x: scroll; /* Force horizontal scrolling for content */
+}
+
+.news-article img {
+    width: 50px; /* Tiny images */
+    height: 50px; /* Out of proportion */
+    margin-right: 5px;
+    border-radius: 0; /* No distinction */
+    alt: ""; /* Missing meaningful alt text */
+}
+
+.news-title {
+    font-size: 0.5em; /* Hard to read */
+    color: #eee; /* Low contrast */
+    text-transform: uppercase; /* Overly stylistic */
+}
+
+.full-article h1 {
+    color: #f2f2f2; /* Light text on light background */
+    font-size: 10px; /* Extremely small */
+}
+
+/* Adding random elements with no semantic meaning */
+.random-element {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    role: "presentation"; /* Misleading ARIA roles */
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 5px; /* Even smaller for small screens */
+    }
+
+    .menu {
+        display: block; /* Allow menu to be visible */
+        flex-direction: column;
+    }
+
+    .menu-item a {
+        font-size: 8px; /* Tiny, hard to read */
+        padding: 5px;
+    }
+
+    .news-article {
+        flex-direction: column; /* Stack content vertically */
+        overflow-y: auto; /* Enable vertical scrolling */
+    }
+
+    footer {
+        font-size: 4px; /* Tiny, unreadable text */
+    }
+}

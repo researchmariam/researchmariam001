@@ -2,34 +2,34 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: silver;
+    background-color: whitesmoke /*background untk semua screen */;
     display:block;
     min-height:100vh;
 	overflow-x: hidden; /* Prevent horizontal scrolling */
     overflow-y: auto; /* Allow the body to scroll if content overflows */
     margin-bottom: 50px;
-    color: #111; /* Low contrast text */
-    font-size: 10px; /* Small text size */
+    color:grey ; /* Low contrast text color for body home & contact section and hoover atas*/
+    font-size: 10px; /* Small text size for semua text kat body*/
     
 }
 
-header {
-    background-color: #222;
-    color: #333;
+div.header {
+    background-color: lightblue;/*header background*/
+    color: #333; /* underline untuk link dekat header */
     padding: 0.2rem 0;
     text-align: center;
 }
 h1 {
-    background-color: black;
+    /*background-color: red;*/
     font-family: Franklin Gothic Heavy, sans-serif;
-    color: rgba(245, 245, 245, 0.432);
+    color: lightgray; /* poor contrast for header*/
     font-size: 100px;
     line-height: 0.01;
 
 }
 
 /* color for bar submenu*/
-nav {
+div.navigation {
     background-color: #111;
 }
 
@@ -39,6 +39,7 @@ nav {
     padding: 0;
     display: flex;
     justify-content: space-around;
+    font-size: 12px; /*font size for submenu*/
 }
 
 .menu-item {
@@ -48,7 +49,7 @@ nav {
 }
 
 .menu-item a {
-    color: rgba(245, 245, 245, 0.432);
+    color: purple ; /* text color untuk submenu*/
     padding: 15px 20px;
     text-decoration: none;
     display: block;
@@ -56,13 +57,13 @@ nav {
 
 .menu-item a:hover,
 .menu-item:hover > a {
-    background-color: #222;
+    background-color:red; /*bila hoover to the link submenu*/
 }
 
 .submenu {
     display: none;
     position: absolute;
-    background-color: #444;
+    /*background-color:green; not use */
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -85,7 +86,7 @@ main {
     padding: 2rem;
 }
 
-footer {
+div.footer {
     background-color: #333;
     color: white;
     text-align: center;
@@ -93,7 +94,7 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-	font-size: 8px;
+	font-size: 10px;
 }
 
 .hidden {
@@ -125,7 +126,7 @@ p {
         max-width: 800px;
         margin: 5px auto;
         padding: 5px;
-        background-color: #fff;
+        /*background-color: #bc7439; not using */
         border-radius: 0px; /* No visual separation */
         box-shadow: none; /* No shadow for separation */
     }
@@ -140,21 +141,21 @@ p {
         display: flex; /* Enables flexbox layout */
         align-items: flex-start; /* Aligns items at the start of the flex container */
         padding: 120px;
-        border-bottom: 1px solid #ccc; /* Optional: Adds a border to separate articles */
+        border-bottom: 1px solid lightgray; /* Optional: Adds a border to separate articles */
     }
     
     .news-title {
        margin-top: 0; 
-       font-size: 1em;
+       font-size: 2em;
        margin-bottom: 10px;
-       color: #1a1a1a; /* Example color */
-       background-color:white
+       color: #fa0707; /* Example color */
+       background-color:purple; /*sub news link title color font*/
     
     }
     
     .news-meta {
         font-size: 0.9em;
-        color: #555;
+        color: greenyellow; /*news details date etc*/
         margin-bottom: 20px;
     }
     
@@ -191,7 +192,7 @@ p {
 }
 
 .full-article h1 {
-    color: silver; /* Your desired color  testtesttest*/
+    color: rgb(253, 13, 13); /* Your desired color  testtesttest*/
     font-family: 'Arial', sans-serif; /* Ensure font family is applied */
     font-size: 12px;
 
